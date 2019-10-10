@@ -1,4 +1,32 @@
 主队列同步造成死锁的原因：
+/** 主队列同步 */
+- (void)syncMain {
+
+    NSLog(@"
+
+**************主队列同步，放到主线程会死锁***************
+
+");
+
+    // 主队列
+    dispatch_queue_t queue = dispatch_get_main_queue();
+
+    dispatch_sync(queue, ^{
+        for (int i = 0; i < 3; i++) {
+            NSLog(@"主队列同步1   %@",[NSThread currentThread]);
+        }
+    });
+    dispatch_sync(queue, ^{
+        for (int i = 0; i < 3; i++) {
+            NSLog(@"主队列同步2   %@",[NSThread currentThread]);
+        }
+    });
+    dispatch_sync(queue, ^{
+        for (int i = 0; i < 3; i++) {
+            NSLog(@"主队列同步3   %@",[NSThread currentThread]);
+        }
+    });
+}
 
 如果在主线程中运用主队列同步，也就是把任务放到了主线程的队列中。
 
