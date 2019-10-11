@@ -1,3 +1,11 @@
 Custom URL scheme 的好处就是，你可以在其它程序中通过这个url打开应用程序。
 
 http://www.cocoachina.com/articles/51689?filter=ios
+
+
+<key>LSApplicationQueriesSchemes</key>
+<array>
+<string>appName</string>
+</array>
+
+app之间传值： 在需要打开第三方App的点击事件处的url处后面加上参数，类似NSString *url = @"appName://?name=lbp&age=22";
