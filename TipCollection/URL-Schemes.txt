@@ -1,1 +1,3 @@
-Custom URL scheme 的好处就是，你可以在其它程序中通过这个url打开应用程序
+Custom URL scheme 的好处就是，你可以在其它程序中通过这个url打开应用程序。
+
+http://www.cocoachina.com/articles/51689?filter=ios
