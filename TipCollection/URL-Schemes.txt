@@ -1,0 +1,1 @@
+Custom URL scheme 的好处就是，你可以在其它程序中通过这个url打开应用程序
