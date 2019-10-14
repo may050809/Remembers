@@ -1,0 +1,14 @@
+Runtime底层原理--IMP查找流程、动态方法解析、消息转发源码分析
+
+struct objc_class : objc_object {
+  Class superclass;
+  cache_t cache;
+  class_data_bits_t bits;
+  class_rw_t *data() {
+    return bits.data();
+  }
+
+  void setData(class_rw_t *newData) {
+    bits.setData(newData);
+  }
+}
