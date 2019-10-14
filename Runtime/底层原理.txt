@@ -12,3 +12,10 @@ struct objc_class : objc_object {
     bits.setData(newData);
   }
 }
+
+bits中包含各种数据，cache（每个类都有一个）用来存储方法select和imp，select和imp会以哈希表形式存在。
+objc_msgSend在快速查找的时候，就是通过汇编查找objc_class中的cache，如果找到则直接返回，否则通过c的lookup，找到后再存入cache。
+
+汇编部分快速查找
+首先调用objc_msgSend会走到ENTRY
+
