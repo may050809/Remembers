@@ -1,1 +1,5 @@
 This is for Auto Network Request
+
+You can get new response model by add new model text in Model.plist and run the model.py script. 
+
+For the format for new model text, you can refer to model text in Model.plist.
