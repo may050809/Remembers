@@ -1,0 +1,6 @@
+iOS7以后，苹果给UIViewController引入了topLayoutGuide 和 bottomLayoutGuide两个属性。用于表示顶部或底部的高度。
+根据有无显示状态栏、导航栏、tabBar返回高度。如果VC内嵌VC，内嵌的VC将视为另起的顶底坐标体系，不受原状态栏等影响。
+你可能听都没听过这两属性，因为开发中我们习惯直接用宏写上数值，几乎不用这两个属性。更何况那时iPhone还没有全面屏这种东西。
+
+到了iOS11，苹果弃用了topLayoutGuide和bottomLayoutGuide两个属性。引入了safeArea代替。
+官方的建议是 不能被遮挡的内容和控件在安全区域范围内显示。如果视图底部有按钮，在全面屏下，请约束底部距离34，不要影响到Home功能。
