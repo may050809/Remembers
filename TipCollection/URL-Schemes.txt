@@ -9,3 +9,6 @@ http://www.cocoachina.com/articles/51689?filter=ios
 </array>
 
 app之间传值： 在需要打开第三方App的点击事件处的url处后面加上参数，类似NSString *url = @"appName://?name=lbp&age=22";
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
